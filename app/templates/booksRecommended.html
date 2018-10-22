@@ -1,0 +1,35 @@
+
+
+{% extends 'base.html' %}
+
+
+{% block app_content %}
+<body class="booksRecommended">
+
+  <div class="row">
+    <div class="col-11 offset-1">
+      <h1 class="b"> Based on the book you liked, here are some recommendations! <h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 offset-2">
+      <h4 class="c"> Click on the learn more button to see more about that book. </h4>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-5 offset-4">
+  <h4 class="invisibleLoader" id="invisibleLoader"> {{ bookSearch }} </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5 offset-md-3">
+    <div id="viewerCanvas"></div>
+  </div>
+</div>
+<div class="row">
+<div class="col-md-5 offset-md-3">
+  <script type="text/javascript" src="static/js/googleBookRenderApi.js"> </script>
+</div>
+</div>
+</body>
+{% endblock %}

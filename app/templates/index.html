@@ -161,10 +161,8 @@ function loop() {
 	}
 }
 
-window.onload = setTimeout(2000,init);
-$(document).ready(
-  $('#world').css('display', 'none');
-)
+window.onload = setTimeout(20000,init);
+
 </script>
 <!-- <script>
 $(window).load(function() {
@@ -174,34 +172,29 @@ $(window).load(function() {
 
 <div class="container containerIndexPage col-12">
   <div class="row">
-    <h1 class="a offset-1"> Book Finder </h1>
+    <h1 class="a offset-1"> The Year is 2040.. </h1>
+
   </div>
   <div class="row">
-        <h4 class="b"> How does this work? </h4>
+        <h4 class="indexH4"> All books have been burned. </h4>
   </div>
 <div class="row">
   <div class="col-8 offset-2">
-    <p> To use this website, simply enter the name of one of your favorite authors. You will receive books from authors with similar styles. You can also create an account so that you can save your favorite selections!</p>
+    <p class="indexP"> A few brave souls worked tirelessly to digitalize and immortalize what they could. These books are now available through the use of this website..</p>
 </div>
   </div>
+  <div class="row">
+  <div class="col-3 offset-4 form-group">
+  <form method="POST" action="{{ url_for('booksRecommended') }}" name="bookSearch">
+  <input class="inputIndexPage" type="text" name="bookSearch" id="inputIndexPage">
 
-  <div class="offset-3 form-group">
-  <form method="POST" action="/booksRecommended">
-  <input class="indexPage" type="text" name="bookSearch" id="test">
+
 </form>
 </div>
-  <div class="row">
-    <div class="col-3 offset-3">
-    <a href="#">
-      <button type="button" class="btn btn-outline-light indexPage test" id="test2">Submit</button>
-    </a>
-  </div>
-
-  </div>
+</div>
 
 
   </div> <!-- Ending div for input -->
 
-</div>
 </body>
 {% endblock %}
